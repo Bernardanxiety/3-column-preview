@@ -48,7 +48,7 @@ p {
 }
 
 .uppercase {
-    color: hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 94%);
     text-transform: uppercase;
     font-family:var(--ff-name);
     font-weight: var(--fw-mid);
