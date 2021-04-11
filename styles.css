@@ -87,7 +87,7 @@ a:focus {
     --clr: var(--bg-sedan);
 
     border-radius: 2vw 2vw 0 0;
-    background: red;
+    background: var(--bg-sedan);
 }
 
 .suv {
