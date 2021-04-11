@@ -4,12 +4,14 @@
 --bg-suv: hsl(184, 100%, 22%);
 --bg-luxury: hsl(179, 100%, 13%);
 
---ff-name: 'Lexend Deca';
---ff-normal: 'Big Shoulders Display';
+--ff-normal: 'Lexend Deca';
+--ff-name: 'Big Shoulders Display';
 
 --fw-low: 400;
 --fw-mid: 700;
 }
+
+
 /* reset */
 *, 
 *::before,
@@ -17,14 +19,7 @@
     box-sizing: border-box;
 }
 
-body {
-    color: hsla(0, 0%, 100%, 0.75);
-    margin: 0;   
-    font-family: 'Big Shoulders Display', ;
-    font-weight: var(--fw-low);
-    font-size: 15px;
-    line-height: 1.8;
-}
+
 
 h1,
 h2,
@@ -37,29 +32,38 @@ p {
 }
 /* utility classes */
 .flow-content > * + * {
-    margin: 1rem 0 0 0;
+    margin: var(--space, 1.5rem) 0 0 0;
 }
 
 
 
 .container {
     padding: 5rem 1.5rem;
+    max-width: 70rem;
 }
 
 .inner {
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .uppercase {
-    color: #fff;
-    font-family: var(--ff-normal);
+    color: hsl(0, 0%, 95%);
     text-transform: uppercase;
+    font-family:var(--ff-name);
+    font-weight: var(--fw-mid);
 }
 
 
 /* general styling */
 
-
+body {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin: 0;   
+    font-family: var(--ff-normal);
+    font-weight: var(--fw-low);
+    font-size: 15px;
+    line-height: 1.8;
+}
 
 a {
     color: var(--clr, #000);
@@ -102,9 +106,10 @@ a:focus {
     flex-direction: column;
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 56rem) {
     .container {
         flex-direction: row;
+        margin: 0 auto;
     }
 
     .sedan {
@@ -113,6 +118,14 @@ a:focus {
 
     .luxury {
         border-radius: 0 1vw 1vw 0;
+    }
+
+    .uppercase {
+        font-size: 4rem;
+    }
+
+    a {
+        --space: 5rem;
     }
 
 }
